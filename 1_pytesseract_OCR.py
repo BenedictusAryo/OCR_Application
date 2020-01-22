@@ -27,7 +27,7 @@ elif args["preprocess"] == "blur":
     gray_img = cv2.medianBlur(gray_img, 3)
 
 # Write the grayscale image to disk as temporary file
-filename = "{}.png".format(os.getpgid())
+filename = "{}.png".format(os.getpid())
 cv2.imwrite(filename, gray_img)
 
 # Load the image as a PIL/Pillow image,
